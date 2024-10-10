@@ -14,8 +14,8 @@ const port = 5001;
 //const server = http.createServer(); // Create an HTTP server
 
 const server = https.createServer({
-    cert: fs.readFileSync('/~/fullchain.pem'), // Update this path if needed
-    key: fs.readFileSync('/~/privkey.pem'), // Update this path if needed
+    cert: fs.readFileSync('~/fullchain.pem'), // Update this path if needed
+    key: fs.readFileSync('~/privkey.pem'), // Update this path if needed
     
 });
 console.log("keys loaded");
