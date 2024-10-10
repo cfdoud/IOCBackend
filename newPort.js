@@ -14,10 +14,10 @@ const port = 5001;
 //const server = http.createServer(); // Create an HTTP server
 
 const server = https.createServer({
-    cert: fs.readFileSync('~/fullchain.pem'), // Update this path if needed
-    key: fs.readFileSync('~/privkey.pem'), // Update this path if needed
-    
+    cert: fs.readFileSync('/home/ubuntu/fullchain.pem'),
+    key: fs.readFileSync('/home/ubuntu/privkey.pem'),
 });
+
 console.log("keys loaded");
 const wss = new WebSocket.Server({ server }); // Pass the HTTP server to WebSocket
 
