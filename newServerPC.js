@@ -10,7 +10,7 @@ console.log("AWS_ACCESS_KEY_ID:", process.env.AWS_ACCESS_KEY_ID);
 console.log("AWS_SECRET_ACCESS_KEY:", process.env.AWS_SECRET_ACCESS_KEY);
 console.log("AWS_BUCKET_NAME:", process.env.AWS_BUCKET_NAME);
 
-const port = 5001;
+const port = 443;
 const server = http.createServer(); // Create an HTTP server
 const wss = new WebSocket.Server({ server }); // Pass the HTTP server to WebSocket
 
