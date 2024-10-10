@@ -14,8 +14,8 @@ const port = 5001;
 //const server = http.createServer(); // Create an HTTP server
 
 const server = https.createServer({
-    cert: fs.readFileSync('/etc/letsencrypt/live/iocserver.paracontechnologies.com/fullchain.pem'),
-    key: fs.readFileSync('/etc/letsencrypt/live/iocserver.paracontechnologies.com/privkey.pem'),
+    cert: fs.readFileSync('~/fullchain.pem'),
+    key: fs.readFileSync('~/privkey.pem'),
 });
 const wss = new WebSocket.Server({ server }); // Pass the HTTP server to WebSocket
 
