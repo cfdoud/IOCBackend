@@ -12,11 +12,13 @@ console.log("AWS_BUCKET_NAME:", process.env.AWS_BUCKET_NAME);
 
 const port = 5001;
 //const server = http.createServer(); // Create an HTTP server
-const wss = new WebSocket.Server({ server }); // Pass the HTTP server to WebSocket
+
 const server = https.createServer({
     cert: fs.readFileSync('/etc/letsencrypt/live/iocserver.paracontechnologies.com/fullchain.pem'),
     key: fs.readFileSync('/etc/letsencrypt/live/iocserver.paracontechnologies.com/privkey.pem'),
-  });
+});
+const wss = new WebSocket.Server({ server }); // Pass the HTTP server to WebSocket
+
 // Function to get public IP
 const getPublicIP = () => {
   return new Promise((resolve, reject) => {
